@@ -3,6 +3,8 @@ import Card from "../components/Card.astro";
 import Icon from "../components/Icon.astro";
 import { Image } from "astro:assets";
 import profilePic from "../assets/avatar.webp";
+import Title from "../components/Title.astro";
+import BlurryShape from "../components/BlurryShape.astro";
 
 const now = new Date();
 
@@ -16,7 +18,9 @@ const formatter = new Intl.DateTimeFormat("es-CL", {
 const timeNow = formatter.format(now);
 ---
 
-<article id="hero">
+<article id="hero relative">
+  <Title text="PROFILE" customClass="right-16 top-8 text-primary-500/50" />
+  <BlurryShape color="#ffd900a1" customClass="-bottom-0 left-32" />
   <section class="pt-20 grid grid-cols-12 gap-4">
     <div class="col-span-3 grid grid-rows-4 grid-flow-col gap-y-4">
       <Card customClass="row-span-2 !bg-gray-600/50 text-white">
@@ -187,5 +191,9 @@ const timeNow = formatter.format(now);
 <style>
   .avatar__mask {
     clip-path: circle(50% at 50% 50%);
+  }
+
+  .font-monoton {
+    font-family: "Monoton", cursive;
   }
 </style>
