@@ -80,6 +80,18 @@ export default {
 				},
 
 			},
+			animation: {
+				glow: 'glow 100ms ease-in forwards'
+			},
+			keyframes: {
+				glow: {
+					'0%': { boxShadow: '0 0' },
+					'100%': { boxShadow: '0 0 8px #ffffe7' }
+				}
+			},
+			backgroundImage: theme => ({
+				'radial-gradient': `radial-gradient(circle farthest-side at 50% 110%, #533857a1, rgba(84,61,199,0))`,
+			})
 		},
 	},
 	plugins: [],
