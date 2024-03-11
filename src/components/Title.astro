@@ -1,0 +1,18 @@
+---
+import "@fontsource/monoton";
+
+interface Props {
+  text: string;
+  customClass?: string;
+}
+
+const { text, customClass } = Astro.props;
+---
+
+<h2 class=`absolute text-9xl ${customClass}`>{text}</h2>
+
+<style>
+  h2 {
+    font-family: "Monoton", system-ui;
+  }
+</style>
