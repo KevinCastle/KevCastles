@@ -20,10 +20,10 @@ const timeNow = formatter.format(now);
 
 <article id="hero relative">
   <Title text="PROFILE" customClass="right-16 top-8 text-primary-500/50" />
-  <BlurryShape color="#ffd900a1" customClass="-bottom-0 left-32" />
+  <BlurryShape color="#ffd900a1" customClass="bottom-16 left-0 lg:bottom-0 lg:left-32" />
   <section class="pt-20 grid grid-cols-12 gap-4">
-    <div class="col-span-3 grid grid-rows-4 grid-flow-col gap-y-4">
-      <Card customClass="row-span-2 !bg-gray-600/50 text-white">
+    <div class="col-span-12 lg:col-span-3 grid grid-cols-2 lg:grid-cols-none lg:grid-rows-4 lg: grid-flow-col gap-x-4 lg:gap-x-0 lg:gap-y-4 order-2 lg:order-1">
+      <Card customClass="col-span-1 lg:col-span-none lg:row-span-2 !bg-gray-600/50 text-white">
         <div class="d-flex flex-col lg:flex-row">
           <p class="text-xl xl:text-2xl">
             <span class="font-semibold">Geek, developer, roleplayer</span>
@@ -35,11 +35,11 @@ const timeNow = formatter.format(now);
           </p>
         </div>
       </Card>
-      <Card link customClass="row-span-2">
+      <Card link customClass="col-span-1 lg:col-span-0  lg:row-span-2">
         <p>BLOG POST :D</p>
       </Card>
     </div>
-    <div class="col-span-9 grid grid-cols-12 grid-rows-4 gap-4">
+    <div class="col-span-12 lg:col-span-9 grid grid-cols-12 grid-rows-4 gap-4 order-1 lg:order-2">
       <div class="col-span-8 row-span-1 grid grid-cols-2 gap-x-4">
         <Card
           customClass="col-span-1 text-light flex justify-center items-center text-center py-6"
@@ -111,12 +111,12 @@ const timeNow = formatter.format(now);
         </a>
       </div>
       <Card
-        customClass="col-span-8 row-span-2 md:!p-0 !bg-accent/20 overflow-visible relative"
+        customClass="col-span-8 row-span-2 sm:!p-0 !bg-accent/20 overflow-visible relative"
       >
         <div class="avatar flex justify-center align-center w-full h-full">
           <div class="flex justify-center items-center">
             <div
-              class="avatar__mask w-[75%] md:w-[60%] absolute left-1/2 -translate-x-1/2 bottom-9 pointer-events-none"
+              class="avatar__mask w-[75%] sm:w-[70%] lg:w-[80%] xl:w-[70%] 2xl:w-[60%] absolute left-1/2 -translate-x-1/2 bottom-4 lg:bottom-20 xl:bottom-10 2xl:bottom-9 pointer-events-none"
             >
               <Image
                 src={profilePic}
@@ -127,14 +127,14 @@ const timeNow = formatter.format(now);
           </div>
           <div class="absolute bottom-0 left-0">
             <div class="bg-primary-500/[0.85] rounded-t-3xl px-2 pt-2 w-fit">
-              <p class="text-4xl xl:text-5xl font-bold text-black">
+              <p class="text-3xl lg:text-4xl xl:text-5xl font-bold text-black">
                 Kevin Castillo
               </p>
             </div>
             <div
               class="bg-primary-500/[0.85] rounded-se-3xl rounded-es-2xl px-2 pt-1 pb-2"
             >
-              <p class="text-4xl xl:text-4xl font-semibold text-black">
+              <p class="text-2xl lg:text-3xl xl:text-4xl font-semibold text-black">
                 Frontend web developer
               </p>
             </div>
@@ -148,7 +148,7 @@ const timeNow = formatter.format(now);
       >
         <Card
           link
-          customClass="!bg-pink-400/50 hover:!bg-pink-500/60 text-light flex flex-col justify-center items-center text-center py-6"
+          customClass="!bg-pink-400/50 hover:!bg-pink-500/60 text-light flex flex-col justify-center items-center text-center h-full py-6"
         >
           <Icon
             name="envelopeSimpleFill"
