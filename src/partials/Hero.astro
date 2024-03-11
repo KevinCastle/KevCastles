@@ -1,0 +1,199 @@
+---
+import Card from "../components/Card.astro";
+import Icon from "../components/Icon.astro";
+import { Image } from "astro:assets";
+import profilePic from "../assets/avatar.webp";
+
+const now = new Date();
+
+const formatter = new Intl.DateTimeFormat("es-CL", {
+  hour: "numeric",
+  minute: "numeric",
+  hour12: true,
+  timeZone: "America/Santiago",
+});
+
+const timeNow = formatter.format(now);
+---
+
+<article id="hero">
+  <section class="pt-20 lg:pt-32 grid grid-cols-12 gap-4">
+    <div class="col-span-3 grid grid-rows-4 grid-flow-col gap-y-4">
+      <Card
+        customClass="row-span-2 mt-4 !bg-gray-600/70 dar:!bg-gray-600/50 text-white"
+      >
+        <div class="d-flex flex-col lg:flex-row">
+          <p class="text-xl xl:text-2xl">
+            <span class="font-semibold">Geek, developer, roleplayer</span>
+            {" "}
+            always hungry for growth. Passionate about
+            <span class="font-semibold">code, community,</span>
+            {" "}
+            and embracing the
+            <span class="font-semibold">joy of tech.</span>
+            {" "}
+            Building and sharing great solutions. 🚀
+          </p>
+        </div>
+      </Card>
+      <Card link customClass="row-span-2">
+        <p>BLOG POST :D</p>
+      </Card>
+    </div>
+    <div class="col-span-9 grid grid-cols-12 grid-rows-4 gap-4">
+      <div class="col-span-8 row-span-1 grid grid-cols-2 gap-x-4">
+        <Card
+          customClass="col-span-1 !bg-accent/70 dark:!bg-accent/50 text-light flex justify-center items-center text-center py-6"
+        >
+          <div class="flex flex-col justify-center items-center">
+            <p class="text-3xl xl:text-5xl font-bold">3+</p>
+            <p class="text-sm xl:text-lg break-words xl:break-normal">
+              Years exp.
+            </p>
+          </div>
+        </Card>
+        <Card
+          customClass="col-span-1 !bg-pink-500/70 dark:!bg-pink-500/50 text-light flex justify-center items-center text-center py-6"
+        >
+          <div class="flex flex-col justify-center items-center">
+            <p class="text-3xl xl:text-5xl font-bold">9+</p>
+            <p class="text-sm xl:text-lg">Projects</p>
+          </div>
+        </Card>
+      </div>
+      <div class="col-span-4 row-span-2 grid grid-cols-2 gap-4">
+        <a
+          href="https://github.com/KevinCastle"
+          target="_blank"
+          class="w-full h-full"
+        >
+          <Card
+            link
+            customClass="flex justify-center items-center text-center !bg-gray-900/60 hover:!bg-gray-900/70 dark:!bg-gray-700/50 dark:hover:!bg-gray-700/60 h-full w-full !p-3"
+          >
+            <Icon name="githubLogoFill" size="3rem" customClass="mx-auto" />
+          </Card>
+        </a>
+        <a
+          href="https://www.linkedin.com/in/kevin-castillo11/"
+          target="_blank"
+          class="w-full h-full"
+        >
+          <Card
+            link
+            customClass="flex justify-center items-center text-center !bg-[#0A66C2]/70 hover:!bg-[#0A66C2]/80 dark:!bg-[#0A66C2]/50 dark:hover:!bg-[#0A66C2]/60 h-full w-full !p-3"
+          >
+            <Icon
+              name="linkedinLogoFill"
+              size="3rem"
+              size="2rem"
+              customClass="mx-auto"
+            />
+          </Card>
+        </a>
+        <a
+          href="https://www.threads.net/@kevcastles.dev"
+          target="_blank"
+          class="w-full h-full"
+        >
+          <Card
+            link
+            customClass="flex justify-center items-center text-center !bg-[#d62976]/70 hover:!bg-[#d62976]/80 dark:!bg-[#d62976]/50 dark:hover:!bg-[#d62976]/60 h-full w-full !p-3"
+          >
+            <Icon name="instagramLogoFill" size="3rem" customClass="mx-auto" />
+          </Card>
+        </a>
+        <a
+          href="https://tiktok.com/@kevcastles.dev"
+          target="_blank"
+          class="w-full h-full"
+        >
+          <Card
+            link
+            customClass="flex justify-center items-center text-center !bg-[#00b7b6]/70 hover:!bg-[#00b7b6]/80 dark:!bg-[#00F2EA]/50 dark:hover:!bg-[#00F2EA]/60 h-full w-full !p-3"
+          >
+            <Icon name="tiktokLogoFill" size="3rem" customClass="mx-auto" />
+          </Card>
+        </a>
+      </div>
+      <Card
+        customClass="col-span-8 row-span-2 md:!p-0 !bg-accent/50 dark:!bg-accent/20 overflow-visible relative"
+      >
+        <div class="avatar flex justify-center align-center w-full h-full">
+          <div class="flex justify-center items-center">
+            <div
+              class="avatar__mask w-[75%] md:w-[60%] absolute left-1/2 -translate-x-1/2 bottom-9 pointer-events-none"
+            >
+              <Image
+                src={profilePic}
+                alt="Kevin Castillo"
+                class="object-cover"
+              />
+            </div>
+          </div>
+          <div class="absolute bottom-0 left-0">
+            <div class="bg-primary-500/[0.85] rounded-t-3xl px-2 pt-2 w-fit">
+              <p class="text-4xl xl:text-5xl font-bold text-black">
+                Kevin Castillo
+              </p>
+            </div>
+            <div class="bg-primary-500/[0.85] rounded-se-3xl rounded-es-2xl px-2 pt-1 pb-2">
+              <p class="text-4xl xl:text-4xl font-bold text-black">
+                Frontend web developer
+              </p>
+            </div>
+          </div>
+        </div>
+      </Card>
+      <a
+        href="mailto:me@kevcastles.boo"
+        target="_blank"
+        class="col-span-4 row-span-1 w-full h-full"
+      >
+        <Card
+          link
+          customClass="!bg-tertiary-600/60 hover:!bg-tertiary-600/80 dark:!bg-tertiary-300/50 dark:hover:!bg-tertiary-300/60 text-light flex flex-col justify-center items-center text-center py-6"
+        >
+          <Icon
+            name="envelopeSimpleFill"
+            customClass="w-[30%] h-auto mx-auto"
+          />
+          <p>Contact me</p>
+        </Card>
+      </a>
+      <a href="/" class="col-span-4 row-span-1 w-full h-full">
+        <Card
+          link
+          customClass="!bg-[#EBB400]/80 hover:!bg-[#EBB400]/90 dark:!bg-primary-500/50 dark:hover:!bg-primary-500/60 flex flex-col justify-center items-center text-center h-full w-full py-6"
+        >
+          <Icon
+            name="readCvLogoFill"
+            customClass="w-[20%] sm:w-[30%] h-auto mx-auto"
+          />
+          <p>Resume</p>
+        </Card>
+      </a>
+      <div class="col-span-8 row-span-1 grid grid-cols-2 gap-4">
+        <Card
+          customClass="flex flex-col justify-center items-center !bg-secondary-950/70 hover:!bg-secondary-900/80 dark:!bg-gray-950/50 dark:hover:!bg-gray-950/60 h-full w-full !p-0"
+        >
+          <Icon name="mapPinFill" size="2rem" />
+          <p class="text-sm sm:text-lg pt-2 uppercase font-semibold">
+            Santiago, Chile
+          </p>
+        </Card>
+        <Card
+          customClass="flex justify-center items-center text-center !bg-secondary-950/70 hover:!bg-secondary-900/80 dark:!bg-gray-950/50 dark:hover:!bg-gray-950/60 h-full w-full !p-0"
+        >
+          <p class="text-xl sm:text-3xl uppercase font-semibold">{timeNow}</p>
+        </Card>
+      </div>
+    </div>
+  </section>
+</article>
+
+<style>
+  .avatar__mask {
+    clip-path: circle(50% at 50% 50%);
+  }
+</style>
