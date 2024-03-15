@@ -3,13 +3,15 @@ import "@fontsource/monoton";
 
 interface Props {
   text: string;
-  customClass?: string;
+  className?: string;
 }
 
-const { text, customClass } = Astro.props;
+const { text, className } = Astro.props;
 ---
 
-<h2 class=`absolute text-9xl ${customClass}`>{text}</h2>
+<h2 class=`absolute right-2 md:right-16 top-8 text-7xl md:text-9xl ${className}`>
+  {text}
+</h2>
 
 <style>
   h2 {

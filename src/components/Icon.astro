@@ -3,10 +3,10 @@ interface Props {
   name: string;
   size?: string;
   fill?: string;
-  customClass?: string;
+  className?: string;
 }
 
-const { name, size = "1rem", fill = "currentColor", customClass } = Astro.props;
+const { name, size = "1rem", fill = "currentColor", className } = Astro.props;
 
 let icon, label;
 switch (name) {
@@ -63,7 +63,7 @@ switch (name) {
   viewBox="0 0 256 256"
   fill={fill}
   aria-label={label}
-  class={customClass}
+  class={className}
 >
   <path d={icon}></path>
 </svg>

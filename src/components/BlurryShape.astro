@@ -2,10 +2,10 @@
 interface Props {
   color: string;
   size?: string;
-  customClass?: string;
+  className?: string;
 }
 
-const { color, size = "32rem", customClass } = Astro.props;
+const { color, size = "32rem", className } = Astro.props;
 ---
 
 <svg
@@ -16,7 +16,7 @@ const { color, size = "32rem", customClass } = Astro.props;
   height={size}
   viewBox="0 0 800 800"
   opacity="1"
-  class=`absolute ${customClass}`
+  class=`absolute w-96 lg:w-[512px] h-96 lg:h-[512px] ${className}`
   ><defs
     ><filter
       id="bbblurry-filter"
