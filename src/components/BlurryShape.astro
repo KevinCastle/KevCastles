@@ -16,7 +16,7 @@ const { color, size = "32rem", className } = Astro.props;
   height={size}
   viewBox="0 0 800 800"
   opacity="1"
-  class=`absolute w-96 lg:w-[512px] h-96 lg:h-[512px] ${className}`
+  class=`absolute w-96 lg:w-[512px] h-96 lg:h-[512px] pointer-events-none ${className}`
   ><defs
     ><filter
       id="bbblurry-filter"
